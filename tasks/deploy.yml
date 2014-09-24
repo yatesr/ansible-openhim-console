@@ -1,0 +1,5 @@
+- name: Deploy archive to web root
+  unarchive: copy=yes
+             dest={{openhim_console_web_root}}
+             src={{openhim_console_archive_loc}}
+
