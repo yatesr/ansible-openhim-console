@@ -5,4 +5,4 @@ openhim_console_deploy: false
 openhim_console_archive_loc:
 
 # Web server directory to install to
-openhim_console_web_root: /var/www/html
+openhim_console_web_root: /usr/share/nginx/html
