@@ -6,6 +6,9 @@
 - include: deploy.yml
   when: openhim_console_deploy
 
+- include: install.yml
+  when: not openhim_console_deploy
+
 - name: ensure web server is started
   service: name=nginx
            state=started

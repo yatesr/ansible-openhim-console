@@ -6,3 +6,6 @@ openhim_console_archive_loc:
 
 # Web server directory to install to
 openhim_console_web_root: /usr/share/nginx/html
+
+# Version of openhim-console to use
+openhim_console_version: v1.0.0
