@@ -1,6 +1,6 @@
 - name: Get openhim-console relase
   get_url: dest=/tmp
-	   url=https://github.com/jembi/openhim-console/releases/download/{{openhim_console_release}}/openhim-console.tar.gz
+           url=https://github.com/jembi/openhim-console/releases/download/{{openhim_console_release}}/openhim-console.tar.gz
            
 - name: Extract archive to web root
   unarchive: copy=no
