@@ -6,6 +6,19 @@ openhim_console_archive_loc:
 
 # Web server directory to install to
 openhim_console_web_root: /usr/share/nginx/html
+openhim_console_owner: www-data
 
 # Version of openhim-console to use
 openhim_console_version: v1.0.0
+
+# Git branch to install.  Leave blank to install a released version.
+openhim_console_branch: 
+
+# Config options for default.json when using git install
+openhim_console_config_protocol: https
+openhim_console_config_host: localhost
+openhim_console_config_port: 8080
+openhim_console_config_title: "OpenHIM Admin Console"
+openhim_console_config_footerTitle: "OpenHIM Administration Console"
+openhim_console_config_footerPoweredBy: "<a href='http://openhim.org/' target='_blank'>Powered by OpenHIM</a>"
+openhim_console_config_loginBanner: 

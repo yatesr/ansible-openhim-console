@@ -1,0 +1,37 @@
+- name: Grab {{openhim_console_branch}} from github
+  git: dest=/tmp/openhim-console
+       repo=https://github.com/jembi/openhim-console
+       version={{openhim_console_branch}}
+
+- name: Run npm install
+  npm: path=/tmp/openhim-console
+
+- name: Install cli npm tools
+  npm: name={{item}}
+       global=yes
+       state=present
+  with_items:
+    - grunt-cli
+    - grunt
+    - bower
+
+- name: Install bower componenets
+  shell: "chdir=/tmp/openhim-console bower -f --allow-root install"
+    
+
+- name: Insert config file
+  template: src=default.json.j2
+            dest=/tmp/openhim-console/app/config/default.json
+
+- name: Build openhim-console
+  shell: "chdir=/tmp/openhim-console grunt -v"
+
+- name: Deploy openhim console to root www
+  shell: "rsync -r /tmp/openhim-console/dist/* {{openhim_console_web_root}}/"
+
+- name: Set permissions
+  file: path={{openhim_console_web_root}}
+        recurse=yes
+        owner={{openhim_console_owner}}
+        group={{openhim_console_owner}}
+

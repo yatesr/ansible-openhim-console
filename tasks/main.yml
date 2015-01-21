@@ -7,7 +7,10 @@
   when: openhim_console_deploy
 
 - include: install.yml
-  when: not openhim_console_deploy
+  when: not openhim_console_deploy and openhim_console_branch is undefined
+
+- include: git.yml
+  when: not openhim_console_deploy and openhim_console_branch is defined
 
 - name: ensure web server is started
   service: name=nginx
