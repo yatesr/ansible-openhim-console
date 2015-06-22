@@ -7,3 +7,7 @@
              dest={{openhim_console_web_root}}
              src=/tmp/openhim-console.tar.gz
 
+- name: Insert config file
+  template: src=default.json.j2
+            dest={{openhim_console_web_root}}/config/default.json
+
