@@ -9,7 +9,7 @@ openhim_console_web_root: /usr/share/nginx/html
 openhim_console_owner: www-data
 
 # Version of openhim-console to use
-openhim_console_version: v1.1.0
+openhim_console_version: v1.2.0
 
 # Git branch to install.  Leave blank to install a released version.
 openhim_console_branch: 
