@@ -31,7 +31,7 @@ Role Variables
 
     # Config options for default.json when using git install
     openhim_console_config_protocol: https
-    openhim_console_config_host: {{ansible_default_ipv4.address}}
+    openhim_console_config_host: "{{ansible_default_ipv4.address}}"
     openhim_console_config_port: 8080
     openhim_console_config_title: "OpenHIM Admin Console"
     openhim_console_config_footerTitle: "OpenHIM Administration Console"
@@ -49,7 +49,7 @@ Example Playbook
          - openhim-console
       vars:
          # Change this to the fqdn if you will access the server using its fqdn.
-       	 openhim_console_config_host: {{ansible_default_ipv4.address}}
+       	 openhim_console_config_host: "{{ansible_default_ipv4.address}}"
 
 License
 -------
