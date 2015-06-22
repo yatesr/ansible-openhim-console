@@ -9,8 +9,8 @@ openhim_console_web_root: /usr/share/nginx/html
 openhim_console_owner: www-data
 
 # Version of openhim-console to use
-openhim_console_version: v1.2.0
-
+openhim_console_version: 1.2.0
+openhim_console_url: "https://github.com/jembi/openhim-console/releases/download/v{{openhim_console_version}}/openhim-console-v{{openhim_console_version}}.tar.gz"
 # Git branch to install.  Leave blank to install a released version.
 openhim_console_branch: 
 
