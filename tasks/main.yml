@@ -10,6 +10,6 @@
   when: not openhim_console_deploy
 
 - name: ensure web server is started
-  service: name=nginx
+  service: name={{openhim_webserver}}
            state=started
            enabled=yes
