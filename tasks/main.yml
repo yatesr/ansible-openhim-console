@@ -1,6 +1,6 @@
 ---
 - name: Install webserver
-  apt: name=nginx
+  apt: name={{openhim_webserver}}
        state=installed
 
 - include: deploy.yml

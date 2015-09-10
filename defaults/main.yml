@@ -4,8 +4,10 @@ openhim_console_deploy: false
 # Location of local tar.gz to deploy if above is true
 openhim_console_archive_loc:
 
+# Debian package to install for webserver
+openhim_webserver: "apache2"
 # Web server directory to install to
-openhim_console_web_root: /usr/share/nginx/html
+openhim_console_web_root: /var/www/html
 openhim_console_owner: www-data
 
 # Version of openhim-console to use
